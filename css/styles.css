@@ -17,18 +17,7 @@ header {
 }
 
 footer {
-  height: 250px;
   background-color: #1d293e;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer_copyright {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  margin-inline: 12px;
 }
 
 main {
