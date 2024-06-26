@@ -1,35 +1,69 @@
+/* VARS */
+:root {
+  --footer-color: #1d293e;
+  --header-color: #ffffff;
+  --header-height: 100px;
+}
+
 /* LAYOUT */
-body,
+main,
 header,
 footer,
+nav {
+  max-width: 1320px;
+  min-width: 320px;
+  margin-inline: auto;
+}
+
 main {
-  width: 100%;
-  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  min-height: 100vh;
+  height: 100%;
 }
 
 header {
-  height: 100px;
+  height: var(--header-height);
+}
+
+nav {
+  background-color: var(--header-color);
 }
 
 .header_logo {
   height: 70px;
-  width: 70px;
+  width: 100%;
+  min-width: 65px;
 }
 
 footer {
-  background-color: #1d293e;
+  background-color: var(--footer-color);
 }
 
-main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  margin-bottom: 64px;
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #fff;
 }
 
 section {
+  width: 100%;
   padding: 64px;
+}
+
+section[id="shadow-host-companion"] {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  height: min-content;
 }
 
 h1 {
@@ -43,13 +77,6 @@ h2 {
 h3,
 p {
   font-size: small;
-}
-
-/* FORMULARIO */
-form {
-  width: 90%;
-  height: 50%;
-  margin: auto;
 }
 
 /* HISTORIA */
@@ -68,9 +95,9 @@ form {
 
 /* HOME */
 .home_banner_img {
-  max-height: 550px;
+  max-height: calc(100vh - var(--header-height));
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .home_banner_section {
