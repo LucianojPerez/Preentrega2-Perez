@@ -22,6 +22,7 @@ main {
   align-content: flex-start;
   min-height: 100vh;
   height: 100%;
+  margin-inline: auto;
 }
 
 header {
@@ -84,7 +85,6 @@ p {
   background-image: url("../imagenes/bombonera-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
   opacity: 0.9;
 }
 
