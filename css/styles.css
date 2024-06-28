@@ -51,12 +51,24 @@ footer a:hover {
   color: #fff;
 }
 
+/* estilos por defecto para todas las secciones */
 section {
   width: 100%;
-  padding: 64px;
+  padding: 24px;
   padding-bottom: 0;
 }
 
+/* ultima seccion dentro de main con padding-bottom */
+main section:last-child {
+  padding-bottom: 64px;
+}
+
+/* primera seccion dentro de main con padding-top */
+main section:first-of-type {
+  padding-top: 64px;
+}
+
+/* selector "data-attribute" */
 section[id="shadow-host-companion"] {
   padding: 0;
 }
@@ -82,16 +94,19 @@ p {
 }
 
 /* HISTORIA */
-.historia-background {
-  background-image: url("../imagenes/bombonera-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.8;
+.historia_content  {
+  background-color: #013A69;
+}
+
+.historia_content img {
+  height: 200px;
+  width: auto;
+  margin: auto;
 }
 
 .historia-parrafo {
   color: #fff;
-  font-size: 50px;
+  font-size: clamp(1.5rem, 2.5vw, 0.5rem);
 }
 
 /* HOME */
@@ -101,10 +116,6 @@ p {
   object-fit: fill;
 }
 
-.home_banner_section {
-  padding: 0;
-}
-
 /* NOTICIAS */
 .noticias_title {
   margin-inline: auto;
@@ -112,7 +123,6 @@ p {
 }
 
 .noticias_content {
-  padding-bottom: 64px;
   grid-template-columns: repeat(4, minmax(auto, 1fr));
 
   @media (max-width: 768px) {
@@ -123,11 +133,6 @@ p {
 
 .noticias_content img {
   height: 180px;
-}
-
-/* TIENDA */
-.tienda_content {
-  padding-bottom: 64px;
 }
 
 /* MOBILE */
